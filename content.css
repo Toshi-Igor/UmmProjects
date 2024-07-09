@@ -1,0 +1,237 @@
+header {
+    background-color: #3c3969; /* Dark Blue */
+    padding: 1em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.header-content h1 {
+    color: #fff;
+}
+
+.header-content h3 {
+    color: white;
+}
+
+nav {
+    background-color: #312f52; /* Dark Purple */
+    text-align: center;
+    padding: 1em;
+    max-width: 100%;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Change text color on hover */
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+#user-tab {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: #726fb3; /* Dark Purple */
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#user-tab:hover {
+    background-color: #3a3a4e;
+}
+#user-dropdown {
+    display: none; /* Initially hide the dropdown */
+    position: absolute;
+    top: 3em;
+    right: 1em;
+    background-color: #2a2a3e; /* Darker Purple */
+    padding: 1em;
+    border-radius: 5px;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+#user-dropdown a { /* pag pinindot mo yung settings may lalabas */
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#user-dropdown a:hover {
+    background-color: #3a3a4e;
+}
+
+#logged-in-name { /* Yung hi, "username" */
+    color: #fff; /* White text */
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    color: black;
+
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cacaca;
+    color: #f2f2f2;
+}
+
+.container h2 { /* "BidMo CMS - Dashboard */
+    text-align: center;
+    padding: 10px;
+
+}
+
+.container { 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px; /* Add space below h1 and h2 */
+}
+
+.analytics-container {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.analytics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.analytics-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-item h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.analytics-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.analytics-item li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.analytics-item li:hover {
+    background-color: #f0f0f0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+/* Make item names bold */
+li strong {
+    font-weight: bold;
+}
+
+/* Container for user details */
+.user-details-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* User Details Container */
+.user-details-container {
+    display: block;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    align-items: center;
+    width: 62%;
+    margin-left: 19%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 100px;
+}
+
+
+.user-details {
+    background-color: #a7a7b8;
+    border-bottom: 0px solid #ddd;
+    padding-bottom: 20px; 
+}
+
+.user-details p {
+    margin: 5px 0;
+    padding: 20px;
+    color: #000000;
+    
+}
+
+.user-details-container h2 {
+    color: #57577a;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.floating-container {
+    width: 48%;
+    background-color: #f2f2f2; 
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+  }
+
+  .floating-container img{
+    width: 48%;
+  }
+ 

@@ -1,0 +1,599 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #cacaca; 
+  color: #f2f2f2; 
+}
+
+header {
+  background-color: #3c3969; 
+  padding: 1em;
+  text-align: left; 
+  display: flex;
+  align-items: center; 
+}
+
+footer {
+  background-color: #3c3969; 
+  text-align: center;
+  padding: 1em;
+  position: static;
+  bottom: 0;
+  max-width: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  max-width: 100px; 
+  height: auto;
+}
+
+.header-content {
+  flex: 1; 
+  text-align: center; 
+  color: #fff; 
+}
+
+
+nav {
+  background-color: #312f52; 
+  text-align: center;
+  padding: 1em;
+  max-width: 100%;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1em;
+  margin: 0 1em;
+}
+
+section {
+  padding: 2em;
+  text-align: center;
+}
+
+
+h2 {
+  color: #131224; 
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.category {
+  background-color: #2a2a3e;
+  border: 1px solid #1f1d3a; 
+  border-radius: 5px;
+  margin: 1em;
+  padding: 1em;
+  width: 200px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.category:hover {
+  background-color: #3a3a4e;
+}
+
+#user-tab {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: #312f52; 
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#user-tab:hover {
+  background-color: #3a3a4e;
+}
+#user-dropdown {
+  display: none; 
+  position: absolute;
+  top: 3em;
+  right: 1em;
+  background-color: #2a2a3e; 
+  padding: 1em;
+  border-radius: 5px;
+  z-index: 1; 
+}
+
+#user-dropdown a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#user-dropdown a:hover {
+  background-color: #3a3a4e;
+}
+
+#logged-in-name {
+  color: #fff; 
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+#dynamic-content-container {
+  padding: 2em;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.upload-container,
+.listings-container,
+.item-container,
+.approval-container, 
+.floating-container {
+  width: 48%;
+  background-color: #f2f2f2; 
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.floating-container,
+.upload-container,
+.approval-container, 
+.listings-container {
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.upload-container label {
+  color: #000;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+.listings-container ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.listings-container li {
+  width: calc(33.33% - 16px); 
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.listings-container a { 
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: block;
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: center;
+  padding: 7px;
+}
+
+.listings-container a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  background-color: #312f52;
+  color: white;
+}
+
+.listings-container ul li {
+  font-size: 14px; 
+}
+
+.upload-container label {
+  color: #000;
+}
+
+
+.loading-message {
+  text-align: center;
+  color: #000;
+}
+
+.item-details {
+  color: #000;
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.item-details h2 {
+  color: #000;
+  text-align: left;
+
+}
+
+.item-details img {
+  max-width: 48%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px; 
+}
+
+.latest-bid-details {
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.latest-bid-details h3 {
+  color: #333;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.latest-bid-details p {
+  color: #666;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+#userProfileEditContainer {
+  background-color: #f2f2f2; 
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: none; 
+  align-self: center;
+  align-items: center;
+}
+
+#userProfileEditContainer p {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+#userProfileEditContainer img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px; 
+}
+
+#userProfileEditContainer button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#userProfileEditContainer button:hover {
+  background-color: #45a049;
+}
+
+#bidFormContainer label {
+  color: black;
+  text-align: center;
+}
+.bids-list {
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.bids-list p {
+  margin-bottom: 10px;
+  color: black; 
+}
+
+.bids-list h3 {
+  margin-bottom: 10px;
+  color: black; 
+}
+
+.approval-section {
+  margin-bottom: 20px;
+}
+
+.approval-section span {
+  margin-bottom: 10px;
+  color: #000;
+  display: block; 
+  text-align: center; 
+}
+
+.approval-section h2 {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.approval-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.approval-section li {
+  color: #000;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  list-style-type: none;
+  text-align: center; /* Center the content horizontally */
+}
+
+.approval-section li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333; /* Default text color */
+  transition: color 0.3s; /* Smooth transition for color change */
+  margin-bottom: 10px;
+}
+
+.approval-section li a:hover {
+  color: #007bff; /* Text color on hover */
+}
+
+.approval-section button {
+  padding: 15px 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.approve-btn button {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.approval-container {
+  height: 500px;
+  position: relative;
+  overflow: auto;
+}
+
+.decline-btn button {
+  background-color: #c11609;
+  color: #ffffff;
+}
+
+#userDetailsContainer {
+  display: none;
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Add a subtle shadow */
+  width: 80%; /* 80% width of the parent container */
+  max-width: 800px; /* Maximum width to prevent it from becoming too wide */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+#userDetailsContainer p {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+#userDetailsContainer img {
+  width: 48%; /* Set image width */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#userDetailsContainer div {
+  margin-bottom: 10px;
+}
+
+#userDetailsContainer label {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px; /* Set label width */
+  color: #000;;
+  position: relative;
+}
+
+#userDetailsContainer button {
+  width: 30%;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#profileContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+#profileContainer p {
+  color: #000;
+}
+
+
+.winner-container {
+  background-color: #f2f2f2; 
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000;
+  width: 48%;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.winner-info {
+  margin-bottom: 20px;
+}
+
+.winner-info h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.winner-info p {
+  margin-bottom: 5px;
+}
+
+.winner-info img {
+  max-width: 40%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#proofPicturesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #787878;
+}
+
+#proofPicturesContainer img {
+  max-width: 50%;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+#proofPicturesContainer p {
+  text-align: center;
+  margin: 5px;
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #000000; /* Adjust the text color as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  font-style: italic; /* Adjust the font style as needed */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+  .upload-container,
+  .listings-container,
+  .item-container,
+  .approval-container, 
+  .floating-container {
+      width: 100%;
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  .listings-container ul li {
+      font-size: 16px;
+  }
+
+  .listings-container ul li a{
+      font-size: 16px;
+  }
+
+  .item-name {
+      font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+  .upload-container,
+  .listings-container,
+  .item-container,
+  .approval-container, 
+  .floating-container {
+      width: 100%;
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  .listings-container ul li {
+      font-size: 18px;
+  }
+
+  .listings-container ul li a{
+      font-size: 18px;
+  }
+
+  .item-name {
+      font-size: 16px;
+  }
+}
